@@ -1,0 +1,839 @@
+.index-body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+div > span {
+    width: 100%;
+}
+
+.burger-buttons-container {
+    position: absolute;
+    display: none;
+    margin-top: -1px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 0.5s;
+    z-index: 10;
+    background-color: #232323FF;
+}
+
+.burger-buttons {
+    display: block;
+    padding: 15px 30px 15px 30px;
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    border-top: 1px solid dimgray;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #232323FF;
+    padding: 0;
+    margin: 0;
+    z-index: 15;
+}
+
+nav > ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: right;
+    list-style: none;
+}
+
+nav > ul :first-child {
+    margin-right: auto;
+}
+
+nav > ul li a {
+    display: block;
+    padding: 15px 30px 15px 30px;
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.burger {
+    display: none;
+}
+
+nav li a:hover {
+    background: black;
+    transition: all 0.3s ease;
+}
+
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    z-index: 2;
+}
+
+nav li:hover > ul {
+    display: block;
+    background-color: #232323FF;
+}
+
+nav li > ul li ul {
+    position: absolute;
+    right: -150px;
+    top: 0;
+}
+
+/*Main (Parallax)*/
+.index-html {
+    overflow: hidden;
+    height: 100%;
+}
+
+.b {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+.par {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
+.par h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: -10%;
+    opacity: 50%;
+}
+
+.par, .par:before {
+    background: 50% 50% / cover;
+}
+
+.par::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+    background-image: url(44.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+.par * {
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+
+}
+
+.main {
+    background-color: black;
+    position: absolute;
+    padding: 1%;
+    z-index: 1;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    color: white;
+}
+
+.menu-buttons {
+    text-align: center;
+    width: 15ch;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: 10;
+}
+
+::-webkit-scrollbar-track {
+    background: #232323FF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #232323FF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*Contact form*/
+.contactform-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#233328, #27303d);
+    background-size: 500% 500%;
+    animation: gradient 5s ease infinite;
+}
+
+.aut {
+    font-family: 'Noto Sans', sans-serif;
+    box-shadow: 0 0 15px black;
+}
+
+.form {
+    background-color: #232323FF;
+    width: 400px;
+    height: 482px;
+    padding: 32px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: #e0e0e0;
+}
+
+.form-input, .form-button {
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.form-title {
+    text-align: center;
+}
+
+.form-input {
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.small {
+    min-height: 25px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.huge {
+    min-height: 225px;
+    border: 1px solid #e0e0e0;
+}
+
+.send {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.form-button {
+    margin-top: 40px;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.form-button:focus, .form-button:hover {
+    background-color: dimgray;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0 33.33%;
+    }
+    20% {
+        background-position: 33.33% 66.66%;
+    }
+    40% {
+        background-position: 66.66% 99.99%;
+    }
+    60% {
+        background-position: 99.99% 66.66%;
+    }
+    80% {
+        background-position: 66.66% 33.33%;
+    }
+    100% {
+        background-position: 33.33% 0;
+    }
+
+}
+
+/*Photos*/
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 60px 10px 10px 10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.filter {
+    background-color: dimgray;
+    color: #e0e0e0;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+.filter:hover {
+    cursor: pointer;
+}
+
+.container {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 100px 300px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gallery-item .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.w-1 {
+    grid-column: span 1;
+}
+
+.w-2 {
+    grid-column: span 2;
+}
+
+.w-3 {
+    grid-column: span 3;
+}
+
+.w-4 {
+    grid-column: span 4;
+}
+
+.w-5 {
+    grid-column: span 5;
+}
+
+.w-6 {
+    grid-column: span 6;
+}
+
+.h-1 {
+    grid-row: span 1;
+}
+
+.h-2 {
+    grid-row: span 2;
+}
+
+.h-3 {
+    grid-row: span 3;
+}
+
+.h-4 {
+    grid-row: span 4;
+}
+
+.h-5 {
+    grid-row: span 5;
+}
+
+.h-6 {
+    grid-row: span 6;
+}
+
+.image {
+    transition: 0.33s;
+    position: relative;
+}
+
+.description {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.download {
+    text-decoration: none;
+    text-transform: uppercase;
+    pointer-events: auto;
+    padding: 5px;
+}
+
+.description:hover {
+    visibility: visible;
+}
+
+.description:hover ~ .myImg {
+    filter: blur(5px);
+}
+
+.myImg:hover {
+    filter: blur(5px);
+}
+
+.myImg:hover ~ .description {
+    visibility: visible;
+}
+
+.zoomed-image-container {
+    position: fixed;
+    visibility: hidden;
+    overflow: scroll;
+    background-color: black;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 0;
+}
+
+.zoomed-image {
+    object-fit: contain;
+}
+
+
+@keyframes move-down {
+
+    0% {
+        top: 10%;
+    }
+    50% {
+        top: 35%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+
+/*Other*/
+.preset-container {
+    margin: 58px 10px 12px 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.preset {
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.preset-photo {
+    max-height: 500px;
+    max-width: 500px;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+
+.preset-name {
+    margin: 15px 0 0 0;
+    text-align: center;
+    opacity: 50%;
+}
+
+.p-night {
+    background-image: url("nightBG.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+}
+
+.p-nature {
+    background-image: url("natureBG.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+}
+
+.p-autumn {
+    background-image: url("autumnBG.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+}
+
+.p-abandoned {
+    background-image: url("abandonedBG.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+
+}
+
+.p-sunset {
+    background-image: url("sunsetBG.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+}
+
+.preset-position-container {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-basis: 0;
+}
+
+.preset-position {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.left{
+    padding: 7% 0;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    opacity: 50%;
+}
+
+.info {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.preset-container-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15px;
+    flex-basis: 0;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.preset-container-buttons {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px black;
+}
+
+.see-button {
+    background-color: #5c5b5b;
+    color: #e0e0e0;
+}
+
+.see-button:hover {
+    background-color: #6b6969;
+}
+
+.buy-button {
+    background-color: #ad3636;
+    color: black;
+}
+
+.buy-button:hover {
+    background-color: red;
+}
+
+.preset-container-buttons:hover, .preset-container-buttons:focus {
+    cursor: pointer;
+}
+
+
+/*MEDIA*/
+@media screen and (max-width: 1250px) {
+    .par h1 {
+        font-size: 45px;
+        text-transform: uppercase;
+        margin-top: 10%;
+        opacity: 50%;
+    }
+
+    .main {
+        background-color: black;
+        position: absolute;
+        padding: 1% 3% 15% 3%;
+        z-index: 1;
+        width: auto;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Noto Sans', sans-serif;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form {
+        background-color: #232323FF;
+        width: 400px;
+        height: 482px;
+        padding: 32px;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        color: #e0e0e0;
+        transform: scale(1.65);
+    }
+
+    .par h1 {
+        font-size: 47px;
+        text-transform: uppercase;
+        margin-top: 20%;
+        opacity: 50%;
+    }
+
+    .main {
+        background-color: black;
+        position: absolute;
+        padding: 1% 3% 6% 3%;
+        z-index: 1;
+        width: 96%;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Noto Sans', sans-serif;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .form {
+        background-color: #232323FF;
+        width: 400px;
+        height: 482px;
+        padding: 32px;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        color: #e0e0e0;
+        transform: scale(1.7);
+    }
+
+    .par h1 {
+        font-size: 33px;
+        text-transform: uppercase;
+        margin-top: 43%;
+        opacity: 50%;
+    }
+
+    .main {
+        background-color: black;
+        position: absolute;
+        padding: 1% 3% 13% 3%;
+        z-index: 1;
+        width: auto;
+        height: auto;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: 15ch;
+        text-align: center;
+    }
+
+    .preset-photo {
+        max-height: 300px;
+        max-width: 300px;
+        object-fit: contain;
+        object-position: 50% 50%;
+    }
+
+    .preset-container-buttons {
+        flex-basis: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
+        grid-column: span 1;
+    }
+
+    .par h1 {
+        font-size: 33px;
+        text-transform: uppercase;
+        margin-top: 43%;
+        opacity: 50%;
+    }
+
+    .main {
+        background-color: black;
+        position: absolute;
+        padding: 1% 3% 15% 3%;
+        z-index: 1;
+        width: auto;
+        height: auto;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: 10ch;
+        text-align: center;
+    }
+
+    .right {
+        min-width: 275px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .par h1 {
+        font-size: 33px;
+        text-transform: uppercase;
+        margin-top: 43%;
+        opacity: 50%;
+    }
+
+    .main {
+        background-color: black;
+        position: absolute;
+        padding: 1% 3% 15% 3%;
+        z-index: 1;
+        width: auto;
+        height: auto;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .menu-buttons {
+        width: 10ch;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: 10ch;
+        text-align: center;
+    }
+
+    .right {
+        min-width: 250px;
+    }
+
+    .preset-photo {
+        max-height: 250px;
+        max-width: 250px;
+        object-fit: contain;
+        object-position: 50% 50%;
+    }
+}
+
+
+
+
